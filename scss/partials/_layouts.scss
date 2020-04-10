@@ -1,0 +1,66 @@
+// general wrapper class
+.wrapper {
+	background-color: $bgBrown;
+	padding: 40px 40px;
+	
+	@include media($tablet) {
+		padding: 40px 20px;
+	}
+	
+	@include media($mobile){
+		padding-right: 15px;
+	}
+}
+
+.container {
+	@extend %post;
+	// Set max-width here
+	
+	&.nav_width {
+		max-width: 100%;
+		padding: 0 40px;
+		
+		@include media($tablet){
+			padding: 0 0;
+		}
+	}
+
+	.content {
+		@include span-columns(8);
+		padding-right: 40px;
+		border-right: 1px solid $borderGray;
+
+		@include media($tablet) {
+			padding-right: 20px;
+		}
+
+		@include media($mobile) {
+			@include span-columns(4);
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+	
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+
+    table {
+        width: 100%;
+        height: auto;
+        border: 1px solid $black;
+
+        tr {
+            border-bottom: 1px solid $black;
+
+            td {
+                padding-left: 15px;
+            }
+        }
+    }
+}

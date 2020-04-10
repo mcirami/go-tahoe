@@ -1,0 +1,128 @@
+#global_footer {
+	@include span-columns(12);
+	//margin-top: 2rem;
+	padding: 60px 0;
+	background: url(../images/footer-bg.jpg) no-repeat;
+	background-size: cover;
+	
+	@include media($mobile) {
+		padding: 40px 20px 20px;
+	}
+
+    .footer_links {
+		@include span-columns(12);
+		@include archerBook;
+		list-style-type: none;
+		text-align: center;
+		
+		
+		@include media($mobile){
+			text-align: left;
+		}
+		
+		li {
+			display: inline-block;
+			
+			@include media($mobile){
+				display: block;
+				padding-bottom: 10px;
+				font-weight: 800;
+			}
+			
+			&:after {
+				content: url(../images/dot.png);
+				position: relative;
+				top: -2px;
+				
+				@include media($mobile){
+					content: none;
+				}
+			}
+			
+			&:last-child {
+				
+				@include media($mobile) {
+					padding-bottom: 0;
+				}
+				
+				&:after {
+					content: none;
+				}
+			}
+			
+			
+			a {
+				text-transform: uppercase;
+				color: $offwhite;
+				margin: 20px;
+				font-size: 12px;
+
+                @include media($tablet) {
+                  margin: 6px;
+                }
+			}
+			
+		}
+		
+	}
+	
+	.social_icons {
+		@include span-columns(12);
+		text-align: center;
+		margin-top: 30px;
+		
+		a {
+			margin: 0px 15px;
+			
+			img {
+				
+			}
+		}
+		
+	}
+	
+}
+
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(81, 143, 163, 1) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+
+    @include media($tablet) {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
+.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+.no-touch .cd-top:hover {
+    background-color: darken($buttonblue, 2%);
+    opacity: 1;
+}

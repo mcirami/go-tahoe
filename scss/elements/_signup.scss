@@ -1,0 +1,165 @@
+.signup {
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+	.gfield {
+
+		&.top_box_content {
+			display: inline-block;
+			background: $light-offwhite;
+			padding: 0 10px 10px 20px;
+			width: 100%;
+			margin-bottom: 20px;
+
+			&:after {
+				content: '';
+				background: url('../images/enews-logo.png') no-repeat;
+				display: block;
+				height: 16px;
+				width: 60px;
+				float: right;
+				clear: none;
+			}
+
+			.gfield_checkbox {
+				width: 100%;
+				display: inline;
+				padding: 0 !important;
+
+				li {
+					list-style-type: none !important;
+				}
+			}
+
+			.gfield_description {
+				display: inline-block;
+			}
+
+			span {
+				@include archerBold;
+			}
+
+			ul {
+				@include archerBook;
+				float: left;
+				padding: 0 45px !important;
+
+				li {
+					padding-bottom: 5px;
+					list-style-type: disc !important;
+				}
+			}
+		}
+	}
+
+	ul {
+		padding-left: 40px;
+	}
+	
+	.gform_wrapper {
+		
+		.gfield_label {
+			@include archerBold;
+		}
+
+		.section_title {
+
+			.gfield_label {
+				display: none;
+			}
+		}
+
+		.pdf_section {
+
+			.gfield_label {
+				display: none;
+			}
+
+			li {
+				padding-left: 25px !important;
+			}
+		}
+
+		.ginput_container {
+			@include archerBook;
+		}
+
+		.form_section_heading {
+			text-transform: uppercase;
+			margin-top: 30px !important;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			
+			&.medium {
+				
+				@include media($tablet){
+					width: 100%;
+				}
+			}
+		}
+
+		input[type="tel"] {
+			padding: 10px;
+		}
+
+		input[type="email"] {
+			padding: 10px;
+			
+			&.medium {
+				
+				@include media($tablet){
+					width: 100%;
+				}
+			}
+		}
+		
+		input[type="submit"] {
+			@include span-columns(5.8);
+			border: 2px solid #518fa3;
+			padding: 10px;
+			text-align: center;
+			font-size: 12px;
+			color: #518fa3;
+			text-transform: uppercase;
+			background: none;
+		}
+		
+		.gfield_no_follows_desc {
+			margin-top: 20px;
+		}
+		
+		ul.gfield_radio li {
+			padding-left: 5px !important;
+		}
+
+		.rfp_upload {
+
+			.gfield_description {
+				width: 60px;
+				float: left;
+			}
+
+			.ginput_container {
+				@include span-columns(10);
+				height: 30px;
+
+				input {
+					padding: 6px 0;
+					width: 56%;
+					
+					@include media($tablet){
+						width: 70%;
+					}
+					
+					@include media($break320){
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+.contact_us {
+	
+	.content {
+		
+		h2 {
+			text-transform: uppercase;
+			margin: 0 0 10px;
+			@include franklinDemiCond;
+			font-size: 24px;
+		}
+		
+		> p {
+			@include archerBook;
+			font-size: 14px;
+		}
+		
+		.contact_info {
+			@include span-columns(12);
+			
+			.phone_number {
+				float: left;
+				margin-right: 40px;
+				@include franklinBook;
+				font-size: 15px;
+				
+				&:before {
+					content: '';
+					background: url('../images/phone_icon.png') center no-repeat;
+					display: block;
+					height: 20px;
+					width: 15px;
+					float: left;
+					clear: none;
+					margin-right: 5px;
+				}
+			}
+			
+			.email_address {
+				float: left;
+				@include franklinBook;
+				font-size: 15px;
+				
+				&:before {
+					content: '';
+					background: url('../images/email_icon.png') center no-repeat;
+					display: block;
+					height: 20px;
+					width: 25px;
+					float: left;
+					clear: none;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	
+	.sidebar {
+		
+		@include media($tablet) {
+			display: block !important;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+		}
+
+		@include media($mobile) {
+			margin-top: 40px;
+		}
+	}
+	
+	.gform_wrapper {
+		@include span-columns(10);
+		margin-top: 40px;
+		
+		@include media($tablet) {
+			@include span-columns(8);
+		}
+		
+		.gfield {
+			margin-bottom: 10px;
+		}
+		
+		.gfield_label {
+			text-transform: uppercase;
+			@include archerBold;
+			font-size: 14px;
+		}
+		
+		input[type="text"], input[type="email"] {
+			height: 40px;
+			
+			&.medium {
+				
+				@include media($mobile){
+					width: 100%;
+				}
+			}
+		}
+		
+		#field_1_2 {
+			margin-bottom: 40px;
+		}
+		
+		textarea {
+			border: none;
+		}
+		
+		#label_5_1 {
+			@include archerBook;
+			font-size: 14px;
+		}
+		
+		input[type="submit"] {
+			@include span-columns(12);
+			border: 2px solid #518fa3;
+			padding: 10px;
+			text-align: center;
+			font-size: 12px;
+			color: #518fa3;
+			text-transform: uppercase;
+			background: none;
+		}
+	}
+}

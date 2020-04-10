@@ -1,0 +1,271 @@
+.homepage {
+	@include span-columns(12);
+
+	@include media($mobile) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	article {
+		@include span-columns(12);
+	}
+	
+	.title_row {
+		@include span-columns(12);
+		
+		h3 {
+			float: left;
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+		
+		.blue_border_button, .white_border_button {
+			float: right;
+			width: auto;
+			padding: 10px 30px;
+			
+			@include media($mobile) {
+				display: none;
+			}
+		}
+
+	}
+	
+	.featured_events {
+		padding-top: 70px;
+		padding-bottom: 80px;
+		
+		@include media($tablet) {
+			padding-top: 0px;
+			padding-bottom: 30px;
+		}
+		
+		@include media($mobile) {
+			padding: 30px 0 40px;
+		}
+		
+		.title_row {
+			margin-bottom: 30px;
+			
+			h3 {
+				
+				&:before {
+					content: '';
+					background: url('../images/featured_events_icon.png') center no-repeat;
+					display: block;
+					height: 18px;
+					width: 25px;
+					float: left;
+					clear: none;
+					margin-right: 10px;
+				}
+			}
+		}
+		
+		.featured_event_row {
+			@include span-columns(12);
+			display: flex;
+			flex-direction: row;
+			display: -webkit-flex;
+			-webkit-flex-direction: row;
+			display: -ms-flexbox;
+			-ms-flex-direction: row;
+			
+			@include media($mobile) {
+				display: block;
+			}
+		}
+		
+		.featured_event {
+			@include span-columns(4);
+			padding-bottom: 50px;
+			flex-grow: 1;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				margin-bottom: 20px;
+			}
+			
+			img {
+				@include span-columns(12);
+				margin-bottom: 20px;
+				height: auto;
+			}
+			
+			h2 {
+				@include span-columns(12);
+				text-transform: uppercase;
+				margin-bottom: 0;
+				height: 50px;
+				
+				a {
+					color: $charcoal;
+				}
+
+				@include media($break1060) {
+					height: 75px;
+				}
+
+				@include media($tablet) {
+					height: 100px;
+				}
+
+				@include media($mobile) {
+					height: auto;
+				}
+			}
+			
+			p {
+				@include span-columns(12);
+				margin-bottom: 20px;
+				
+				@include media($tablet) {
+					margin-bottom: 10px;
+				}
+			}
+			
+			.event_time {
+				float: left;
+				width: auto;
+				
+				&:before {
+					content: '';
+					background: url('../images/clock-Icon.png') center no-repeat;
+					display: block;
+					height: 23px;
+					width: 20px;
+					float: left;
+					clear: none;
+					margin-right: 4px;
+				}
+			}
+			
+			.event_days {
+				float: left;
+				width: auto;
+				@include omega();
+				
+				&:before {
+					content: '';
+					background: url('../images/calendar-icon.png') center no-repeat;
+					display: block;
+					height: 22px;
+					width: 22px;
+					float: left;
+					clear: none;
+					margin-right: 4px;
+				}
+			}
+			
+			.blue_border_button {
+				@include span-columns(6);	
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				
+				&:last-child {
+					@include omega();
+					left: inherit;
+					right: 0;
+				}
+			}
+		}
+	}
+	
+	.featured_activity {
+		
+		
+		> img {
+			@include span-columns(12);
+			
+			@include media($mobile) {
+				width: 400%;
+				right: 200%;
+			}
+		}
+		
+		.featured_activity_content {
+			@include span-columns(12);
+			position: absolute;
+			top: 0; 
+			left: 0;
+			padding: 40px 0 80px;
+
+			@include media($tablet) {
+				padding-top: 0;
+			}
+			
+			@include media($mobile) {
+				padding: 10px 0 80px;
+			}
+		}
+		
+		.title_row {
+			z-index: 10;
+			
+			h3 {
+				color: $white;
+				
+				&:before {
+					content: '';
+					background: url('../images/featured_activity_icon.png') center no-repeat;
+					display: block;
+					height: 18px;
+					width: 25px;
+					float: left;
+					clear: none;
+					margin-right: 10px;
+				}
+			}
+			
+			.white_border_button {
+				float: right;
+				
+				@include media($tablet) {
+					margin-top: 10px;
+				}
+				
+			}
+		}
+		
+		.container {
+
+			@include media($break1000) {
+				padding: 20px;
+			}
+
+			@include media($tablet) {
+				padding-top: 10px;
+			}
+			
+			> p {
+				@include span-columns(12);
+				@include franklinBook;
+				margin-top: 80px;
+				font-size: 50px;
+				line-height: 1.1;
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			.arrow_cta {
+
+				@include media($tablet) {
+					margin-top: 15px;
+				}
+
+				@include media($mobile) {
+					margin-top: 20px;
+				}
+			}
+		}
+		
+		@include media($mobile) {
+			height: 550px;
+			
+			img {
+				height: inherit;
+			}
+		}
+	}
+}

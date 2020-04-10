@@ -1,0 +1,546 @@
+.container .sidebar {
+	//border-left: 1px solid $borderGray;
+	//padding: 0 20px;
+	margin-bottom: 60px;
+	
+	@include media($mobile) {
+		@include span-columns(4);
+		border-left: none;
+		margin-bottom: 0;
+		padding: 40px 20px;
+		background: $dark-offwhite;
+	  	display: none !important;
+	}
+	
+	h3 {
+		color: $darkgray;
+		margin: 0 0 20px;
+		text-transform: uppercase;
+		font-size: 14px;
+		@include archerBold;
+		font-size: 14px;
+	}
+	
+	p, a {
+		@include archerBook;
+		font-size: 14px;
+	}
+		
+	.deals, .lodging_deals {
+		margin-bottom: 30px;
+		
+		ul {
+			list-style: none;
+			
+			li {
+				font-size: 14px;
+			}
+			
+			a {
+				color: $buttonblue;
+			}
+		}
+	}
+	
+	.deals {
+		p {
+			display: block;
+			margin-bottom: 30px;
+		}
+	}
+	
+	.sidebar_deals, .sidebar_events, .sidebar_related {
+		margin-bottom: 55px;
+	}
+	
+	.sidebar_deals {
+		h3:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	.sidebar_events, .sidebar_section {
+		.event, .section {
+			margin-bottom: 40px;	
+		}
+		
+		img {
+			margin-bottom: 20px;
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	
+	.sidebar_related {
+		
+		@include media($mobile) {
+			margin-bottom: 0;
+		}
+		
+		.related_links {
+			a {
+				display: block;
+				margin-bottom: 25px;
+			}
+		}
+	}
+	
+	.blog_categories {
+		list-style: none;
+		margin-bottom: 30px;
+		
+		li {
+			@include archerBook;
+			font-size: 14px;
+		}
+	}
+	
+	#searchform {
+		
+		input[type="search"] {
+			@include span-columns(11);
+			padding: 10px;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+		
+		img {
+			position: absolute;
+			top: 12px;
+			right: 30px;
+
+			@include media($mobile) {
+				right: 35px;
+			}
+		}
+	}
+	
+	.contacts {
+		@include span-columns(12);
+		
+		.contact {
+			@include span-columns(12);
+			margin-bottom: 40px;
+			
+			h3 {
+				@include span-columns(12);
+				text-transform: uppercase;
+				line-height: 1.25;
+				@include archerBold;
+				font-size: 14px;
+			}
+			
+			p, a {
+				@include span-columns(12);
+				@include franklinBook;
+				font-size: 14px;
+				
+				&:before {
+					content: '';
+					background: url('../images/location-icon.png') center no-repeat;
+					display: block;
+					height: 24px;
+					width: 20px;
+					float: left;
+					clear: none;
+					margin-right: 8px;
+				}
+			}
+			
+			.phone_number {
+				
+				&:before {
+					background-image: url('../images/phone_icon.png');
+				}
+			}
+			
+			.fax_number {
+				
+				&:before {
+					background-image: url('../images/fax_icon.png');
+				}
+			}
+			
+			.email_address {
+				
+				&:before {
+					background-image: url('../images/email_icon.png');
+				}
+			}
+		}
+	}
+	
+	img.default_image {
+		max-width: 100%;
+	}
+	
+	.listing_social_feeds {
+		
+		.social_feeds_section {
+			display: inline-block;
+			margin: 20px 0;
+			
+			&:nth-of-type(1) {
+				margin-top: 0;
+			}
+			
+			.social_image {
+				margin-bottom: 20px;
+			}
+			
+			.social_feed_content {
+				
+				img:not(.link_image) {
+					width: 100%;
+				}
+
+				.facebook_update, .instagram_media, .youtube_video {
+					a {
+						width: 100%;
+						display: inline-block;
+						margin-bottom: 15px;
+					}
+				}
+				
+				.tweet {
+					p.username {
+						@include franklinBookCond;
+						font-weight: bold;
+					}
+				}				
+						
+			}	
+		}
+	}
+	
+	.social_icons {
+		text-align: center;
+		margin-top: 40px;
+		
+		a {
+			display: inline-block;
+			height: 22px;
+			margin: 0px 15px;
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.filter_sidebar {
+	@include span-columns(3.5);
+
+    @include media($break855) {
+	    display: none;
+        //display: none !important;
+    }
+    
+    .filter_lists_container {
+		@include span-columns(12);
+		
+		@include media($tablet) {
+			height: 88%;
+			//overflow-y: scroll;
+			margin-bottom: 20px;
+			padding-top: 20px;
+		}
+	}
+	
+	.mobile_filter_close, .mobile_apply_filters {
+		display: none;	
+	}
+	
+	&.mobile_filter {
+		@include span-columns(12);
+		display: none;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		background-color: $offwhite;
+		padding: 40px 20px 75px;
+		
+		.mobile_filter_close, .mobile_apply_filters {
+			@include span-columns(12);
+		}
+		
+		.mobile_filter_close {
+			
+			&:after {
+				content: "";
+				@include span-columns(12);
+				height: 10px;
+				background: url('../images/mobile_filter_top_gradient.png') center no-repeat;
+				background-size: 100%;
+				margin-top: 10px;
+			}
+			
+			a {
+				float: right;
+				width: 20px;
+				height: 20px;
+				
+				img {
+					width: 100%;
+				}
+			}
+		}
+		
+		.mobile_apply_filters {
+			
+			&:before {
+				content: "";
+				@include span-columns(12);
+				height: 10px;
+				background: url('../images/mobile_filter_bottom_gradient.png') center no-repeat;
+				background-size: 100%;
+				margin-bottom: 10px;
+			}
+		}
+		
+		.filter_lists_container {
+			height: 88%;
+			overflow-y: scroll;
+			margin-bottom: 20px;
+			padding-top: 20px;
+		}
+	}
+	
+	.filter_section {
+		@include span-columns(12);
+		margin-bottom: 30px;
+		
+		@include media($mobile) {
+			padding-bottom: 20px;
+			border-bottom: 2px solid #c8beb3;
+		}
+
+		&.town_filter {
+
+			ul {
+				padding-left: 5px;
+			}
+		}
+		
+		h3 {
+			@include span-columns(12);
+			cursor: pointer;
+			font-size: 14px;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			@include archerBold;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				top: -5px;
+				right: 10px;
+				width: 20px;
+				height: 24px;
+			    background: url('../images/sidebar_expand.png') 0 0 no-repeat;
+			    background-position: center center;
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				-ms-transform: rotate(-90deg);
+				-o-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}
+			
+			@include media($mobile) {
+
+				&:after {
+					right: 10px;
+				}
+			}
+			
+			&.filter_open {
+				
+				&:after {
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					-ms-transform: rotate(0deg);
+					-o-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			
+			//background: url('../images/sidebar_expand.png') right no-repeat;
+			//background-position: right 20px center;
+		}
+		
+		.apply_to_all {
+			@include span-columns(12);
+			margin-bottom: 10px;
+			
+			a {
+				font-size: 12px;
+				color: #518fa3;
+				outline: none;
+				@include archerBook;
+				text-decoration: underline;
+			}
+			
+			.clear_filters {
+				float: left;
+			}
+			
+			.select_all {
+				float: right;
+			}
+		}
+		
+		ul {
+			@include span-columns(12);
+			padding-right: 10px;
+			list-style: none;
+
+		  	@include media($tablet) {
+			  padding: 0 10px;
+			}
+			
+			li {
+				@include span-columns(12);
+				margin-bottom: 10px;
+				
+				a {
+					@include span-columns(12);
+					color: black;
+					background-image: url('../images/checkbox_off.jpg');
+					background-repeat: no-repeat;
+					background-size: 16px;
+					background-position: right center;
+					outline: none;
+					@include archerBook;
+					font-size: 14px;
+					line-height: 25px;
+					padding-right: 20px;
+
+				  	@include media($tablet) {
+					  font-size: 11px;
+					}
+					
+					div {
+						float: left;
+						width: 13px;
+						height: 18px;
+						margin-right: 10px;
+						background-position: 0 0;
+
+					  	@include media($tablet) {
+						  margin-right: 5px;
+						}
+					}
+					
+					&.filtered {
+						background-image: url('../images/checkbox_on.jpg');
+						
+						div {
+							background-position-x: 100%;
+						}
+					}
+				}
+				
+				i {
+					
+				}
+			}
+		}
+		
+		&.type_filter {
+			
+			ul li a {
+				line-height: 35px;
+			
+				div {
+					width: 35px;
+					height: 35px;
+				}
+			}
+		}
+		
+		&.amenity_filter {
+
+			ul {
+				padding-left: 5px;
+			}
+			
+			ul li a {
+			
+				div {
+					width: 25px;
+					height: 25px;
+				}
+				
+				&.filtered {
+					
+					div {
+						background-position-x: 50%;
+					}
+				}
+			}
+		}
+		
+		&.deal_type_filter {
+			
+			ul li a {
+				line-height: 30px;
+				
+				div {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	
+	.deals_calendar {
+		@include span-columns(12);
+		
+		input[type="text"] {
+			@include span-columns(11);
+			margin-bottom: 10px;
+			padding: 10px 20px;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+			@include archerBook;
+			font-size: 14px;
+			background: url('../images/sidebar_expand.png') right no-repeat;
+			background-position: right 20px center;
+			background-color: $white;
+			border: none;
+		}
+	}
+}
+
+.container .sidebar.events_sidebar {
+	
+	h3 {
+		@include span-columns(12);
+		@include archerBold;
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+	
+	ul {
+		@include span-columns(12);
+		margin-bottom: 20px;
+		list-style: none;
+		
+		li {
+			@include span-columns(12);
+			@include archerBook;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
+	}
+}

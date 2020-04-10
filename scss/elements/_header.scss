@@ -1,0 +1,88 @@
+#wpadminbar {
+
+	@include media($mobile){
+		top: 0px;
+		position: fixed;
+	}	
+}
+
+#side_nav {
+	z-index: 2;
+}
+
+#js-mobile_menu {
+	
+}
+
+#global_header {
+    width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: -webkit-linear-gradient(#171d25, transparent); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#171d25, transparent); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#171d25, transparent); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#171d25, transparent); /* Standard syntax */
+	padding-bottom: 60px;
+	
+	@include media($tablet){
+		padding-left: 20px;
+		background: none;
+	}
+	
+    .logo_container {
+       @include span-columns(3);
+       max-width: 281px;
+       z-index: 2;
+       margin-top: 3px;
+       float: left;
+        
+        @include media($break1150){
+        	//@include span-columns(3.3);
+        }
+        
+        @include media($break1060){
+        	//@include span-columns(2.8);
+        }
+        
+        @include media($break1000) {
+        	margin-top: 0;
+        }
+        
+        @include media($break900){
+        	max-width: 200px;
+        }
+
+	  	@include media($tablet) {
+			@include span-columns(4);
+			max-width: 281px;
+		}
+        
+        @include media($mobile) {
+	        width: auto;
+	        max-width: 200px;
+        } 
+	    
+	    img {
+	        display: block;
+	        width: 100%;
+	        height: auto;
+	        font-size: 2em;
+	        margin: 0.5em 0;
+        }
+    }
+    
+    .mobile_menu_button {
+		display: none;
+
+		@include media($tablet) {
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -10px;
+			cursor: pointer;
+		}
+    }    
+}

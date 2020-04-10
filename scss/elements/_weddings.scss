@@ -1,0 +1,81 @@
+.weddings_landing {
+	@include span-columns(12);
+	background: $offwhite;
+	padding: 60px;
+	
+	.blue_border_button {
+		margin-top: 10px;
+	}
+	
+	.top_section {
+		@include span-columns(12);
+		
+		p {
+			margin: 20px 0 40px;
+		}
+		
+		.weddings_slider {
+			@include span-columns(12);
+			@include clearfix;
+			margin-bottom: 60px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+
+    .content {
+      @include media($tablet) {
+        width: 100%;
+        float: none;
+      }
+    }
+
+	.weddings_section {
+		@include span-columns(12);
+		margin-bottom: 60px;
+		
+		img {
+			@include span-columns(5.5);
+		}
+		
+		.weddings_content {
+			@include span-columns(5.5);
+			
+			h2 {
+				font-size: 24px;
+				text-transform: uppercase;
+			}
+			
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		
+		&.weddings_left {
+			
+			img {
+				float: right;
+			}
+		}
+		
+		&.weddings_right {
+			
+			.weddings_content {
+				@include shift(1);
+			}
+		}
+	}
+
+    .sidebar {
+
+		@include media($tablet) {
+			width: 100%;
+			float: none;
+			margin-top: 150px;
+		}
+	}
+}

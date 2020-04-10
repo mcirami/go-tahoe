@@ -1,0 +1,314 @@
+.super_nav {
+	@include span-columns(9);
+	float: right;
+	
+	@include media($break1150){
+		//@include span-columns(8);
+	}
+	
+	@include media($break1060){
+		//@include span-columns(8.5);
+	}
+	
+	@include media($break900){
+		//@include span-columns(8.8);
+	}
+
+  	@include media($tablet) {
+	  display: none;
+	}
+	
+	ul {
+		@include clearfix;
+		list-style: none;
+		text-align: right;
+		
+		li {
+			padding-top: 30px;
+			text-transform: uppercase;
+			display: inline-block;
+			text-align: left;
+			
+			@include media($break1000){
+				padding-top: 25px;
+			}
+			
+			@include media($break900){
+				padding-top: 20px;
+			}
+			
+			&:hover {
+				
+				.sub_menu {
+					display: block;
+					background: url('../images/nav_bg_sub.jpg') no-repeat;
+					background-size: cover;
+					padding: 30px 0px 30px 30px;
+					position: absolute;
+					
+					@include media($break1000) {
+						padding: 30px 0px 30px 20px;
+					}
+					
+					@include media($break900) {
+						padding: 30px 0px 30px 10px;
+					}
+					
+					li {
+						padding: 0px;
+						
+						a {
+							padding-left: 0px;
+						}
+					}
+				}
+			}
+			
+			&.nav_where_to_stay {
+				padding-right: 4%;
+				background: url('../images/menu_arrow_light.png') no-repeat 95% 80%;
+				
+				&:hover {
+					background: url('../images/menu_arrow_light.png') no-repeat 95% 80%,
+								url('../images/nav_bg_li.jpg') no-repeat;
+				}
+				
+				.wts {
+					width: 240%;
+					
+					.by_lodge {
+						@include span-columns(5);
+						
+						.lodge_title {
+							margin-bottom: 15px;
+							
+							h3 {
+								@include archerSemibold;
+								background: url('../images/wts_home_icon.png') no-repeat 0% 35%;
+								color: #817869;
+								font-size: 12px;
+								padding-left: 25px;
+							}
+						}
+						
+						ul {
+							
+							li {
+								width: 100%;
+								float: none;
+								display: inline-block;
+								color: $dark-offwhite;
+								text-transform: capitalize;
+								line-height: 28px;
+								
+								a {
+									@include avenirLight;
+									font-size: 14px;
+									color: $dark-offwhite;
+									
+								}
+							}
+						}
+						
+						.nav_see_all {
+							background: url('../images/see_all_icon.png') no-repeat 36% 50%;
+
+							
+							a {
+								@include archerSemibold;
+								font-size: 14px;
+								line-height: 28px;
+								color: $white;
+							}
+						}
+					}
+					
+					.by_town {
+						@include span-columns(7);
+						
+						.town_title {
+							margin-bottom: 15px;
+							
+							h3 {
+								@include archerSemibold;
+								background: url('../images/nav_location_icon.png') no-repeat 0% 45%;
+								color: #817869;
+								font-size: 12px;
+								padding-left: 15px;
+							}
+						}
+						
+						ul {
+							@include span-columns(6);
+							
+							&:nth-child(3) {
+								margin-right: 0px;
+							}
+							
+							li {
+								width: 100%;
+								float: none;
+								display: inline-block;
+								text-transform: capitalize;
+								line-height: 28px;
+								
+								a {
+									@include avenirLight;
+									font-size: 14px;
+									color: $dark-offwhite;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			&.nav_things_to_do {
+				padding-right: 4%;
+				background: url('../images/menu_arrow_light.png') no-repeat 93% 80%;
+				
+				&:hover {
+					background: url('../images/menu_arrow_light.png') no-repeat 93% 80%,
+								url('../images/nav_bg_li.jpg') no-repeat;
+				}
+				
+				.ttd {
+					width: 160%;
+				
+					.ttd_left {
+						@include span-columns(6);
+						
+						li {
+							float: none;
+							width: 100%;
+							display: inline-block;
+							text-transform: capitalize;
+							line-height: 28px;
+							
+							a {
+								@include avenirLight;
+								font-size: 14px;
+								color: $dark-offwhite;
+							}
+						}
+					}
+					
+					.ttd_right {
+						@include span-columns(6);
+						@include omega();
+						
+						li {
+							float: none;
+							width: 100%;
+							display: inline-block;
+							text-transform: capitalize;
+							line-height: 28px;
+							
+							a {
+								@include avenirLight;
+								font-size: 14px;
+								color: $dark-offwhite;
+							}
+						}
+						
+						.nav_see_all {
+							background: url('../images/see_all_icon.png') no-repeat 44% 50%;
+							line-height: 28px;
+							
+							a {
+								@include archerSemibold;
+								font-size: 12px;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+			
+			&.nav_deals {
+				padding-right: 6%;
+				background: url('../images/menu_arrow_light.png') no-repeat 78% 80%;
+				
+				&:hover {
+					background: url('../images/menu_arrow_light.png') no-repeat 78% 80%,
+								url('../images/nav_bg_li.jpg') no-repeat;
+								
+					.sub_menu {
+						padding: 25px 30px 20px 30px;
+					}
+				}
+				
+				ul {
+					
+					li {
+						float: none;
+						width: 100%;
+						display: inline-block;
+						text-transform: capitalize;
+						line-height: 28px;
+						
+						a {
+							@include avenirLight;
+							font-size: 14px;
+							color: $dark-offwhite;
+						}
+					}
+				}
+			}
+			
+			&.nav_chat {
+				background: none;
+				padding-right: 1%;
+				margin-left: 2%;
+				
+				a {
+					padding-left: 0px;
+				}
+			}
+			
+			&.slide_menu {
+				padding-right: 5%;
+				background: url('../images/hamburger.png') no-repeat 100% 100%;
+				cursor: pointer;
+
+				a {
+					
+					@include media($tablet) {
+						font-size: 12px;
+					}
+			  	}
+			}
+			
+			a {
+				@include archerBold;
+				color: #f7f2ec;
+				padding-left: 30px;
+				
+				@include media($break1000){
+					font-size: 14px;
+					padding-left: 20px;
+				}
+				
+				@include media($break900){
+					font-size: 12px;
+					padding-left: 10px;
+				}
+			}
+			
+			.sub_menu {
+				display: none;
+			}
+		}
+	}
+}
+
+.site_wrap {
+	min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}

@@ -1,0 +1,38 @@
+.meetings_landing {
+	@include span-columns(12);
+	
+	.content_right, .content_left {
+			
+		h2 {
+	        margin-bottom: 0;
+		}
+	}
+}
+
+.listing_taxonomy_page {
+	@include span-columns(12);
+	padding-top: 100px;
+	
+	.facility_title {
+		@include span-columns(11);
+		text-transform: uppercase;
+		@include franklinDemiCond;
+		font-size: 24px;
+	}
+	
+	.facility_description {
+		@include span-columns(11);
+		margin-bottom: 60px;
+		@include archerBook;
+		font-size: 14px;
+	}
+	
+	.listing_results_container {
+		@include span-columns(12);
+		
+		.listings_results {
+			@include span-columns(12);
+		}
+	}
+}
+

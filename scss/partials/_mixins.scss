@@ -1,0 +1,86 @@
+// mixins
+
+@mixin clearRow($nth) {
+	&:nth-child(#{$nth}+1) {
+		clear: both;
+	}
+}
+
+// Omega Reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Vertical Align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin button {
+	border: 1px solid $buttonblue;
+	color: $buttonblue;
+	font-size: 12px;
+	padding: 5px 25px;
+}
+
+@mixin archerLight {
+	font-family: 'Archer SSm A', 'Archer SSm B';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin archerBook {
+	font-family: 'Archer SSm A', 'Archer SSm B'; 
+	font-weight: 500; 
+	font-style: normal;
+}
+
+@mixin archerSemibold {
+	font-family: 'Archer SSm A', 'Archer SSm B';
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin archerBold {
+	font-family: 'Archer SSm A', 'Archer SSm B';
+	font-weight: 800;
+	font-style: normal;
+}
+
+@mixin franklinBook {
+	font-family:'ITCFranklinGothicW01-Bk_812647';
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin franklinBookCond {
+	font-family:'ITCFranklinGothicW01-Bk_812656';
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin franklinDemiCond {
+	font-family:'ITCFranklinGothicW01-Dm_812677';
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin avenirLight {
+	font-family: 'Avenir LT W01_35 Light';
+	font-weight: 300;
+	font-style: normal;
+}
+

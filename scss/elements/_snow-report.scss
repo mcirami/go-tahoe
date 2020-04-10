@@ -1,0 +1,422 @@
+.snow_report {
+	
+	h4, h2, label, .status p {
+		text-transform: uppercase;
+	}
+	
+	h4 {
+		margin-bottom: 15px;
+
+		@include media($mobile) {
+			border-image: url("../images/wave_border.png") 0 0 30 0 repeat !important;
+			width: 100%;
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+		}
+
+	}
+
+	&.wrapper {
+
+		@include media($mobile) {
+			padding: 20px 20px 0;
+		}
+	}
+		
+	.snow_report_title, .filter {
+		display: inline-block;
+		float: left;
+		line-height: 1.2;
+	}
+	
+	.filter {
+		float: right;
+		font-size: 1em;
+		padding-top: 24px;
+	
+		@include media($mobile) {
+			background-color: $light-offwhite;
+			display: block;
+			float: none;
+			margin: 0 0 60px;
+			padding: 35px 30px;
+			text-align: center;
+		}
+		
+		label {
+			float: left;
+			font-size: 0.8em;
+			@include archerBold;
+
+			@include media($mobile) {
+				margin-right: 5px;
+			}
+		}
+		
+		.dd-container {
+			float: left;
+			clear: none;	
+		}
+	}
+
+	
+	.wave_border {
+		margin-top: 0;
+		clear: both;
+		
+		@include media($mobile) {
+			display: none;
+		}
+	}
+
+	.weather-wrapper {
+		color: #393834;
+		margin-bottom: 60px;
+
+		@include media($mobile) {
+			border-image: none;
+			margin-bottom: 30px;
+		}
+
+		.temperatures {
+			@include clearfix;
+			line-height: normal;
+			text-align: left;
+			border-image: url('../images/wave_border.png') 0 0 30 0 repeat !important;
+			
+			span {
+				@include franklinBook;
+			}
+
+			@include media($mobile) {
+				border-image: none !important;
+				margin-bottom: 60px;
+				padding-bottom: 0;
+			}
+			
+			.current-temperature {
+				float: left;
+				width: 60%;
+				text-align: center;
+				
+				span {
+					font-size: 155px;
+					font-weight: 800;
+					padding-right: 20px;
+					
+					@include media($desktop) {
+						font-size: 100px;
+					}
+
+					@include media($break900) {
+						padding-right: 0;
+					}
+					
+					@include media($mobile) {
+						font-size: 155px;
+					}
+				}
+				
+				i {
+					font-size: 100px;
+					color: $buttonblue;
+					top: -15px;
+				}
+				
+				sup {
+					font-size: 80px;
+					font-weight: normal;
+					top: -0.7em;
+				}
+				
+				@include media($desktop) {			
+					i {
+						font-size: 80px;
+					}
+					
+					sup {
+						font-size: 50px;
+					}
+				}
+				
+				@include media($mobile) {
+					@include span-columns(4);
+					
+					i {
+						font-size: 100px;
+					}
+					
+					sup {
+						font-size: 80px;
+					}
+				}		
+			}
+
+			.mountains_temperature {
+				width: 40%;
+				margin-top: 30px;
+				border-left: $borderGray 1px solid;
+				float: right;
+
+				@include media($desktop) {
+					margin: 20px auto;
+				}
+
+				@include media($mobile) {
+					@include span-columns(4);
+					text-align: center;
+					padding: 0;
+					margin: 0;
+					border-left: none;
+					border-top: $borderGray 1px solid;
+					padding-top: 20px;
+				}
+				
+				.mtn_single_temperature {
+					font-size: 35px;
+					font-weight: 800;
+
+					@include media($desktop) {
+						font-size: 20px;
+					}
+					
+					&.light {
+						font-size: 25px;
+						font-weight: normal;
+						@include archerBook;
+						
+						@include media($desktop) {
+							font-size: 20px;
+						}
+						
+						@include media($mobile) {
+							font-size: 15px;
+						}
+					}
+					
+					sup {
+						font-size: 22px;
+						top: -0.5em;
+
+						@include media($desktop) {
+							font-size: 14px;
+						}
+					}
+				}
+
+				ul {
+					width: 185px;
+					margin: 0 auto;
+					list-style-type: none;
+					
+					@include media($desktop) {
+						width: 140px;
+					}
+					
+					@include media($mobile) {
+						width: 100%;
+						
+						li {
+							display: inline-block;
+							width: auto;
+							margin-right: 18px;
+						}
+					}
+				}
+			}
+		}
+		
+		.awesome-weather-forecast {
+			border-top: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			
+			.awesome-weather-wrapper {
+				@include clearfix;
+
+				@include media($mobile) {
+					overflow-y: scroll;
+					-ms-overflow-x: scroll;
+					-ms-overflow-style: -ms-autohiding-scrollbar;
+				}
+			
+				.awesome-weather-forecast-day {
+					background: $light-offwhite;
+					width: 16%;
+					margin: 0 1px;
+					padding: 20px 10px;
+
+					@include media($break1060) {
+						padding: 15px 5px;
+					}
+					
+					.awesome-weather-forecast-day-temp {
+						@include franklinBook;
+						font-size: 24px;
+						display: inline-block;
+						
+						@include media($desktop) {
+							font-size: 20px;
+						}
+					}
+			
+					.awesome-weather-forecast-day-abbr {
+						@include archerBook;
+						font-size: 30px;
+						margin-bottom: 20px;
+						
+						@include media($desktop) {
+							font-size: 26px;
+						}
+					}
+	
+					i {
+						color: $buttonblue;
+						padding: 0;
+						display: inline-block;
+
+						&:before {
+
+							@include media($break900) {
+								font-size: 18px;
+							}
+						}
+					}
+					
+					@include media($mobile) {
+						margin: 0 2px;
+					}
+				}
+				
+				@include media($mobile) {
+					min-width: 600px;
+					white-space: nowrap;
+				}				
+			}
+			
+			@include media($mobile) {
+				overflow-x: scroll;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.status_report {
+	@include clearfix;
+	margin-bottom: 80px;
+
+	@include media($mobile) {
+		margin-bottom: 0;
+	}
+	
+	label {
+		@include archerBook;
+		margin-right: 20px;
+		
+		@include media($mobile) {
+			font-weight: 800;
+		}
+	}
+
+	h4 {
+		@include span-columns(6);
+
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+
+	.filter {
+		@include span-columns(6);
+		margin-right: 0;
+
+		@include media($mobile) {
+			@include span-columns(4);
+			display: inline-block;
+			margin:  0 0 20px;
+			padding: 20px;
+		}
+	}
+		
+	.status {
+		@include span-columns(3);
+		text-align: center;
+		margin-right: 0;
+		
+		&:last-child {
+			min-width: 30%;
+		}
+		
+		@include media($mobile) {
+			display: block;
+			text-align: left;
+			width: 100%;
+			margin-bottom: 40px;
+			
+			h2 {
+				width: 50%;
+				float: right;
+				margin: 0;
+			}
+			
+			p {
+				width: 50%;
+				float: left;
+				text-transform: none;				
+			}
+		}
+	}
+	
+	.dd-container {
+		width: auto !important;
+		float: right;
+		margin-bottom: 0;
+
+		@include media($mobile) {
+			float: none;
+			width: 75% !important;
+		}
+	
+		.dd-select {
+			background-color: transparent !important;
+			
+			.dd-selected {
+				padding: 0 30px 0 0 !important;
+
+				@include media($mobile) {
+					text-align: left;
+				}
+			}
+			
+			@include media($mobile) {
+				background-position-x: 100% !important;
+			}
+		}
+
+		label, .dd-options {
+
+			@include media($mobile) {
+				font-weight: normal;
+				float: none;
+			}
+		}
+
+	}
+}
+
+.road_conditions {
+	@include span-columns(12);
+	height: 300px; /*to be fixed*/
+	
+	.road_condition_links {
+		@include span-columns(12);
+		list-style: none;
+		
+		li {
+			margin-bottom: 10px;
+			@include archerLight;
+		}	
+	}
+}

@@ -1,0 +1,41 @@
+.things_to_do {
+	@include span-columns(12);
+	background: $offwhite;
+	padding: 40px;
+	
+	h4 {
+		color: $darkgray;
+		
+		&:before {
+			content: '';
+			background: url('../images/mountains.png') center no-repeat;
+			height: 17px;
+			width: 30px;
+			float: left;
+			margin-right: 6px;
+		}
+	}
+	
+	.activity_links {
+		@include span-columns(12);
+		display: block;
+		-webkit-columns: 50px 3;
+		-moz-columns: 50px 3;
+		columns: 50px 3;
+		float: none;
+		margin-bottom: 60px;
+
+		@include media($mobile) {
+			-webkit-columns: 100px 2;
+			-moz-columns: 100px 2;
+			columns: 100px 2;
+		}
+		
+		a {
+			display: block;
+			@include archerBook;
+			font-size: 14px;
+			padding: 5px;
+		}
+	}
+}

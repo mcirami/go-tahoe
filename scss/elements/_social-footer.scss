@@ -1,0 +1,246 @@
+.social_footer {
+	@include span-columns(12);
+	background: $light-offwhite;
+	padding: 40px;
+	display: block;
+	
+	@include media($tablet) {
+		padding: 40px 20px;
+	}
+	
+	@include media($mobile) {
+		@include span-columns(4);
+		padding: 20px;
+	}
+	
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		display: -webkit-flex;
+		-webkit-flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		display: -ms-flexbox;
+		-ms-flex-direction: row;
+		-ms-flex-wrap: wrap;
+	}
+	
+	h3, h4 {
+		@include archerBold;
+		color: $darkgray;
+		text-transform: uppercase;
+	}
+	
+	h3, p {
+		font-size: 14px;
+	}
+	
+	h3 {
+		margin-top: 0;
+	}
+	
+	h4 {
+		font-size: 16px;
+	}
+	
+	h4.section_header {
+		background: url('../images/bonfire.png') no-repeat left center;
+		padding-left: 30px;
+		margin-bottom: 60px;
+		display: block;
+		width: 100%
+	}
+		
+	.social_footer_section {
+		@include span-columns(4);
+		display: flex;
+		display: -webkit-flex;
+		
+		@include media($mobile) {
+			margin-right: 0;
+		}
+		
+		&:last-child {
+			
+			@include media($mobile) {
+				margin-bottom: 0;
+			}
+		}
+		
+		div {
+			@include clearfix;
+		}
+		
+		.social_footer_content {
+			background: url('../images/line-divider.png') repeat-y 10px 0;
+			padding-left: 30px;
+			
+			@include media($mobile) {
+				background: none;
+				padding-left: 0;
+			}
+		}
+		
+		.social_image {
+			margin-bottom: 13px;
+			display: block;
+			width: 100%;
+			position: absolute;
+			bottom: 100%;
+			
+//			&.twitter {
+//				@include media($mobile) {
+//					background: rl('../images/line-divider-twitter.png') no-repeat -8px;u
+//				}
+//			}
+//
+//			&.instagram {
+//				@include media($mobile) {
+//					background: url('../images/line-divider-instagram.png') no-repeat -8px;
+//				}
+//			}
+//
+//			&.facebook {
+//				@include media($mobile) {
+//					background: url('../images/line-divider-facebook.png') no-repeat -8px;
+//				}
+//			}
+
+		}
+		
+		.tweets {
+			float: left;
+			margin: 15px 0;
+			
+			&:nth-child(3n) {
+				display: none;
+			}
+			
+			img {
+				float: left;
+				display: inline-block;
+				width: 20%;
+				max-width: 40px;
+				
+				@include media($mobile) {
+					width: 17%;
+					max-width: 80px;;
+				}
+			}
+			
+			p {
+				display: inline-block;
+				max-width: 80%;
+				padding-left: 13px;	
+				
+				@include media($mobile) {
+					@include span-columns(3.5);
+					max-width: 83%;
+					padding-left: 20px;
+				}
+				
+				a {
+					word-wrap: break-word;
+				}
+			}
+		}
+		
+		.tweets:first-child {
+			margin-top: 0;
+		}
+		
+		.instagram_media {
+			img {
+				max-width: 300px;
+				margin-bottom: 15px;
+				width: 100%;
+				
+				@include media($desktop) {
+					width: 100%;
+				}
+				
+				@include media($mobile) {
+					max-width: initial;
+				}
+			}
+		}
+		
+		.facebook_update {
+			h4 {
+				margin-top: 0;
+			}
+			
+			img {
+				max-width: 80px;
+				
+				@include media($mobile) {
+					max-width: initial;
+				}
+			}
+			
+			> a:first-of-type {
+				float: left;
+				display: inline-block;
+				margin-right: 20px;
+			}
+			
+			p {
+				display: inline;
+			}
+			
+			iframe {
+				margin-top: 40px;
+				display: block;
+				width: 100%;
+			}
+		}
+		
+		@include media($mobile) {
+			float: none;
+			width: 100%;
+			margin-bottom: 60px;
+		}
+	}
+	
+	.mobile-social-line-divider {
+		width: 100%;
+		overflow: hidden;
+		display: none;
+		
+		img {
+					
+			@include media($mobile) {
+				display: inline-block;
+				width: 100%;
+				min-width: 387px;
+				margin-bottom: 20px;
+			}			
+		}
+		
+		@include media($mobile) {
+			display: block;
+		}
+	}
+}
+
+.twitter {
+	position: relative;
+    bottom: 33px;
+    
+    @include media($mobile) {
+	    display: none;
+    }
+}
+
+.instagram {
+	@extend .twitter;
+}
+
+.facebook {
+	@extend .twitter;
+}
+
+.youtube {
+	background: url('../images/social-youtube.png') no-repeat left top;
+	height: 23px;					
+}

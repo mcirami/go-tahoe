@@ -1,0 +1,240 @@
+.blog, .press_releases {
+	padding-bottom: 40px;
+
+	.content {
+
+		@include media($mobile) {
+			@include span-columns(4);
+			padding: 0 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&.wrapper {
+		
+		h1.title {
+			text-transform: uppercase;
+			@include franklinDemiCond;
+			font-size: 24px;
+			color: $charcoal;
+			
+		}
+
+		@include media($mobile) {
+			padding: 40px 0 0;
+		}
+	}
+
+	.single {
+		@include span-columns(12);
+		background-color: $light-offwhite;
+		margin-bottom: 30px;
+		box-shadow: 1px 1px 1px 1px $borderGray;
+
+		.blog-image-wrapper {
+			overflow: hidden;
+			max-height: 193px;
+			
+			> img {
+				@include span-columns(12);
+				height: 100%;
+			}			
+		}		
+		
+		.single_content {
+			@include span-columns(12);
+			padding: 30px 40px;
+
+			@include media($mobile) {
+				padding: 30px 20px;
+			}
+
+			h2 {
+				text-transform: uppercase;
+				@include franklinDemiCond;
+				font-size: 24px;
+				color: $darkgray;
+
+                a {
+                  color: $charcoal;
+
+                  &:hover {
+                    color: $buttonblue;
+                  }
+                }
+			}
+			
+			.single_categories {
+				@include span-columns(12);
+				list-style: none;
+				margin-bottom: 20px;
+				
+				li {
+					float: left;
+					border-right: 1px solid $borderGray;
+					color: #756e62;
+					text-transform: uppercase;
+					padding: 0 5px;
+					@include archerBold;
+					font-size: 12px;
+					
+					&:first-child {
+						padding-left: 0;
+					}
+					
+					&:last-child {
+						border: none;
+					}
+				}
+			}
+			
+			p {
+				@include archerBook;
+				font-size: 14px;
+				color: $darkgray;
+				font-weight: 600;
+			}
+		}
+		
+		.single_footer {
+			@include span-columns(12);
+			border-top: 1px solid $borderGray;
+			
+			ul {
+				@include clearfix;
+				list-style: none;
+				
+				li {
+					@include span-columns(2);
+					padding: 22px 0;
+					border-right: 1px solid $borderGray;
+					text-transform: uppercase;
+					@include archerBold;
+					font-size: 12px;
+					text-align: center;
+					
+					&:last-child {
+						border: none;
+					}
+				}
+			}
+			
+			.single_date {
+				@include span-columns(3);
+				@include omega();
+				
+				p {
+					width: auto;
+					display: inline-block;
+					text-align: center;
+					color: $darkgray;
+					font-weight: 600;
+					
+					&:before {
+						content: '';
+						background: url('../images/blog_date_icon.png') center no-repeat;
+						display: block;
+						height: 22px;
+						width: 15px;
+						float: left;
+						clear: none;
+						margin-right: 10px;
+					}
+				}
+				
+				@include media($break1100) {
+					@include span-columns(6);
+					@include omega();
+				}
+			}
+			
+			.single_comments {
+				@include span-columns(2.8);
+				@include omega();
+				color: $buttonblue;
+				padding-top: 26px;
+
+				@include media($break1100) {
+					@include span-columns(6);
+					@include omega();
+					border: none;
+					padding-top: 18px;
+				}
+				
+				&:before {
+                  content: '';
+                  background: url('../images/blog_comment_icon.png') center no-repeat;
+                  display: block;
+                  height: 22px;
+                  width: 15px;
+                  float: left;
+                  clear: none;
+                  margin-right: -1px;
+                  margin-left: 10px;
+                  position: relative;
+                  top: -1px;
+
+					@include media($break1100) {
+						float: none;
+						top: 8px;
+						left: -6px;
+						display: inline-block;
+					}
+				}
+			}
+			
+			.share_count {
+				@include span-columns(6.5);
+				@include omega();
+				//min-width: 100px;
+				color: $buttonblue;
+				border: none;
+
+				@include media($break1100) {
+					@include span-columns(6);
+					@include omega();
+					font-size: 10px;
+				}
+				
+				&::before {
+					content: '';
+					background: url("../images/blog_share_icon.png") center no-repeat;
+					display: block;
+					height: 25px;
+					width: 20px;
+					float: left;
+					clear: none;
+				}
+				
+				.share_link {
+					margin-left: 10px;
+				}
+			}
+			
+			.single_shares {
+				@include span-columns(6);
+				@include omega();
+				padding: 10px 0 0;
+				padding-left: 5%;
+				
+				@include media($break1100) {
+					@include span-columns(12);
+					border-top: 1px solid $borderGray !important;
+					padding: 10px 0 10px;
+				}
+				
+				> span {
+					width: 20%;
+				}
+			
+				.stMainServices {
+            		height: 30px;
+        		}
+        		
+    			.stArrow .stBubble_hcount {
+					line-height: 10px;
+				}
+			}
+		}
+	}
+}

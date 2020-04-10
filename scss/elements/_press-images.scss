@@ -1,0 +1,175 @@
+.press_images {
+	
+	.header_content {
+		
+		h2 {
+			
+			&:before {
+				background-image: url('../images/press_image_icon.png');
+				width: 20px;
+			}
+		}
+	}
+	
+	.filter_sidebar {
+		border: none;
+	}
+	
+	.content {
+		border: none;
+		border-left: 1px solid $borderGray;
+		padding: 0 0 0 20px;
+	}
+	
+	.press_images_content {
+		@include span-columns(12);
+		@include omega();
+		
+		@include media($tablet) {
+			@include span-columns(8);
+			padding: 0;
+			border: none;
+		}
+	}
+	
+	.restrictions_conditions {
+		@include span-columns(12);
+		font-size: 14px;
+		
+		h3 {
+			@include archerBold;
+		}
+		
+		p {
+			@include archerBook;
+			margin-bottom: 16px;
+		}
+	}
+	
+	.press_images_results {		
+		@include span-columns(12);
+
+		ul {
+			@include span-columns(12);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 0 20px;
+			
+			@include media($tablet) {
+				padding: 0;
+			}
+		}
+		
+		.press_image {
+			@include span-columns(5.5);
+			@include omega(2n);
+			background-color: $white;
+			margin-bottom: 30px;
+			flex-grow: 0;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				margin: 0 0 30px;
+			}
+			
+			&:nth-child(2n) {
+				@include shift(0.1);
+				
+				@include media($mobile) {
+					@include shift(0);
+				}
+			}
+			
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			
+			.image_content {
+				@include span-columns(12);
+				padding: 10px 20px 20px;
+			}
+			
+			.download_press_image {
+				@include span-columns(12);
+				color: $charcoal;
+				margin-bottom: 20px;
+				font-size: 12px;
+				
+				&:before {
+					content: '';
+					background: url('../images/download_image_icon.png') center no-repeat;
+					display: block;
+					height: 20px;
+					width: 14px;
+					float: left;
+					clear: none;
+					margin-right: 5px;
+				}
+			}
+			
+			.blue_border_button {
+				@include span-columns(4);
+			}
+		}
+	}
+	
+	.login_form {
+		@include span-columns(12);
+		@include omega();
+		background-color: $white;
+		text-align: center;
+		padding: 20px 60px;
+		margin-bottom: 40px;
+		
+		@include media($tablet) {
+			@include span-columns(8);
+		}
+		
+		form {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		
+		h2 {
+			@include archerBold;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			margin-bottom: 20px;
+			height: 32px;
+			
+			label {
+				@include span-columns(3);
+				text-align: left;
+				display: inline-block;
+				@include archerBook;
+				
+				@include media($tablet) {
+					@include span-columns(4);
+				}
+			}
+			
+			input[type="text"], input[type="password"] {
+				@include span-columns(9);
+				@include omega();
+				border: none;
+				background-color: #ece3d9;
+				height: 32px;
+				
+				@include media($tablet) {
+					@include span-columns(4);
+				}
+			}
+		}
+		
+		#wp-submit {
+			padding: 10px;
+			background: none;
+			border: 1px solid $borderGray;
+		}
+	}
+}

@@ -1,0 +1,389 @@
+.single_listing {
+	@include span-columns(12);
+	
+	> .container > .blue_border_button {
+		width: auto;
+		clear: right;
+		margin-bottom: 40px;
+		padding: 10px 20px;
+
+		@include media($mobile) {
+			margin-left: 20px;
+			padding: 10px 20px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&.wrapper {
+
+		@include media($mobile) {
+			padding: 40px 0 0;
+		}
+	}
+
+	.back_to_results {
+		background: transparent;
+		border: none;
+		text-align: center;
+		color: $buttonblue;
+		font-size: 12px;
+		text-transform: uppercase;
+		
+		&:before {
+			content: '';
+			background: url('../images/arrow_left_blue.png') center no-repeat;
+			display: block;
+			height: 14px;
+			width: 20px;
+			margin-right: 10px;
+			float: left;
+			clear: none;
+		}
+	}
+	
+	.content {
+		@include span-columns(8);
+		clear: both;
+
+		@include media($mobile) {
+			@include span-columns(4);
+			padding: 0 20px 40px;
+		}
+		
+		h1 {
+			text-transform: uppercase;
+			@include franklinDemiCond;
+			font-size: 24px;
+		}
+		
+		> p {
+			float: left;
+			margin-right: 30px;
+			@include franklinBook;
+		}
+
+		.blue_border_buttons {
+			margin-bottom: 0;
+
+			&:last-child {
+				
+				@include media($mobile) {
+					display: none;
+				}
+			}
+		}
+		
+		.blue_border_button {
+			width: auto;
+			padding: 10px 50px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			
+			@include media($mobile700){
+				padding: 10px 45px;
+			}
+
+			@include media($mobile) {
+				width: 47.5%;
+				margin-right: 12px;
+				padding: 10px 20px;
+			}
+
+			&:nth-child(2) {
+
+				@include media($mobile) {
+					margin-right: 0;
+				}
+			}
+
+			.buy_activities {
+
+				@include media($mobile) {
+					@include span-columns(4);
+					margin-top: 0;
+				}
+			
+				&:after {
+					content: '';
+					background: url('../images/activity-ticket.png') center no-repeat;
+					height: 23px;
+					width: 55px;
+					display: inline-block;
+					position: absolute;
+					padding-left: 20px;
+
+					@include media($mobile) {
+						display:  none;
+					}
+				}
+			}
+		}
+		
+		> div {
+			@include span-columns(12);
+			margin-bottom: 50px;
+			
+			h3 {
+				margin: 0;
+				color: $charcoal;
+				text-transform: uppercase;
+			}
+		}
+		
+		> .wave_border {
+			margin-bottom: 20px;
+		}
+	}
+	
+	.listing_content {
+		margin-top: 20px;
+		
+		img {
+			float: right;
+			width: 60%;
+			margin-left: 30px;
+			height: auto;
+			display: block;
+			
+			@include media($mobile){
+				width: 100%;
+				float: left;
+				margin-left: 0px;
+			}
+		}
+		
+		p {
+			@include archerBook;
+			font-size: 14px;
+			color: $charcoal;
+			
+			@include media($mobile){
+				display: inline-block;
+			}
+		}
+		
+		.listing_swiper {
+			float: right;
+			width: 60%;
+			position: relative;
+			margin-left: 30px;
+			max-height: 290px;
+			
+			@include media($mobile){
+				float: left;
+				width: 100%;
+				margin-left: 0px;
+				margin-bottom: 10px;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				//height: 325px;
+				margin-bottom: 0px !important;
+				max-height: 290px;
+				
+				.swiper-slide {
+					
+					img {
+						height: 100%;
+						width: 100%;
+						display: block;
+						margin-left: 0px;
+						max-height: 290px;
+					}
+				}
+			}
+			
+			.swiper_nav {
+				
+				@include media($break320){
+					top: 40% !important;
+				}
+				
+				img {
+					width: 100%;
+					margin-left: 0px;
+				}
+			}
+			
+			.slide_count {
+				bottom: 10%;
+				width: 93%;
+				
+				@include media($mobile){
+					bottom: 5%;
+					width: 100%;
+				}
+				
+				@include media($break320){
+					bottom: 5%;
+				}
+
+				.slides_num {
+					@include franklinDemiCond;
+					
+					@include media($break855) {
+						left: 88%;
+					}
+
+					@include media($mobile) {
+						left: 85%;
+					}
+					
+					@include media($break320){
+						left: 80%;
+					}
+				}
+			}
+		}
+	}
+	
+	.phone_number {
+		font-size: 12px;
+
+		@include media($mobile) {
+			margin-bottom: 10px;
+			color: $buttonblue;
+		}
+		
+		&:before {
+			content: '';
+			background: url('../images/phone_icon.png') center no-repeat;
+			display: block;
+			height: 20px;
+			width: 15px;
+			float: left;
+			clear: none;
+			margin-right: 2px;
+		}
+	}
+	
+	.address {
+		font-size: 12px;
+		
+		@include media($mobile){
+			color: $buttonblue;
+		}
+		
+		&:before {
+			content: '';
+			background: url('../images/location-icon.png') center no-repeat;
+			display: block;
+			height: 20px;
+			width: 15px;
+			float: left;
+			clear: none;
+			margin-right: 2px;
+		}
+	}
+	
+	.full_amenity_list {
+		list-style: none;
+		@include span-columns(12);
+		display: flex;
+		flex-wrap: wrap;
+		
+		.result_amenity {
+			float: left;
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			cursor: pointer;
+			background-position-x: 100%;
+		}
+		
+		li {
+			@include span-columns(3);
+			margin: 0px 4%;
+			min-width: 150px;
+			white-space: nowrap;
+			margin-bottom: 10px;
+
+			@include media($mobile) {
+				@include span-columns(2);
+				clear: both;
+				
+				&:nth-child(2n) {
+					margin-right: 0px;
+				}
+			}
+			
+			img {
+				width: 14px;
+				float: left;
+			}
+			
+			p {
+				font-size: 14px;
+				color: $charcoal;
+			}
+		}
+	}
+	
+	.floor_plans, .amenities_list, .downloads {
+		@include span-columns(12);
+		
+		h3 {
+			@include franklinDemiCond;
+			font-size: 24px;
+		}
+		
+		> p {
+			@include archerBook;
+			font-size: 14px;
+			color: $charcoal;
+			margin-bottom: 20px;
+		}
+	}
+	
+	.downloads {
+		
+		a {
+			
+			&:before {
+				content: '';
+				background: url('../images/pdf_icon.png') center no-repeat;
+				display: block;
+				height: 22px;
+				width: 18px;
+				float: left;
+				clear: none;
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+.view_map {
+	float: right;
+	color: $buttonblue;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding-top: 10px;
+
+	@include media($break900) {
+		width: 100%;
+		padding-left: 40px;
+	}
+
+	@include media($mobile) {
+		display: none;
+	}
+	
+	&:before {
+		content: '';
+		background: url('../images/view_map_icon.png') center no-repeat;
+		display: block;
+		height: 20px;
+		width: 37px;
+		float: left;
+		clear: none;
+		position: absolute;
+		right: 60px;
+		top: 2px;
+
+		@include media($break900) {
+			left: 0;
+		}
+	}
+}

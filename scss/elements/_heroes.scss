@@ -1,0 +1,343 @@
+.hero_section {
+	@include clearfix;
+	overflow: hidden;
+		
+	li {
+		display: block;
+	}
+
+	.awesome-weather-hero {		
+		position: absolute;
+		right: 0;
+		bottom: 0px;
+		height: 70px;
+		width: 400px;
+		text-align: center;
+		padding: 0;
+		z-index: 100;
+		
+		@include media($mobile){
+			position: static;
+			width: 100%;
+		}
+
+		&:before {
+		  content: '';
+		  display: inline-block;
+		  height: 100%;
+		  vertical-align: middle;
+		}
+
+		.white_border_button {
+			width: 200px;
+			display: inline-block;
+			float: none;
+			vertical-align: middle;
+			
+			@include media($break320){
+				width: 50%;
+			}
+			
+			a {
+				font-size: 14px;
+			}
+		}
+		
+		&, div {
+			background-color: $buttonblue;
+		}
+		
+		.awesome-weather-wrap {
+			min-width: 35%;
+			max-height: 70px;
+			display: inline-block;
+			vertical-align: middle;
+			
+			.awesome-weather-header {
+				display: none;
+			}
+			
+			.awesome-weather-current-temp {
+				@include archerSemibold;
+				font-size: 45px;
+				padding: 0;
+				text-align: left;
+				max-height: 70px;
+				width: 100%;
+				line-height: inherit;
+				
+				@include media($break320){
+					margin-right: 10px;
+				}
+				
+				i {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
+.hero_image {
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+.hero_container {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    padding: 15% 0 0;
+
+    @include media($break900) {
+        padding: 12% 0 0;
+    }
+
+    @include media($tablet) {
+        padding: 12% 0 0;
+    }
+
+    @include media($mobile) {
+        padding: 90px 0 0;
+    }
+
+    .hero_copy {
+        @include archerBook;
+        max-width: 650px;
+        width: 100%;
+        color: $white;
+        font-size: 20px;
+        padding-left: 20px;
+
+        @include media($mobile) {
+            padding: 0px 20px;
+            max-width: 280px;
+        }
+
+        h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-transform: uppercase;
+            margin: 0;
+
+            @include media($mobile) {
+                font-size: 44px;
+            }
+
+            @include media($break320) {
+                font-size: 35px;
+            }
+
+            &.light_title {
+                @include franklinBookCond;
+            }
+
+            &.bold_title {
+                @include franklinDemiCond;
+            }
+        }
+
+        p {
+            color: $white;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    }
+
+    .hero_single_copy {
+        @include media($break1000) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.featured_titles {
+	@include archerBook;
+	max-width: 650px;
+	width: 100%;
+	color: $white;
+	font-size: 20px;
+	padding-top: 17%;
+	
+	@include media($break900){
+		padding: 0px 30px;
+	}
+	
+	@include media($tablet){
+		padding: 0px 0px;
+	}
+	
+	@include media($mobile){
+		padding: 0px 20px;
+		max-width: 300px;
+	}
+	
+	h2 {
+		font-size: 50px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin: 0;
+		
+		@include media($break320){
+			font-size: 35px;
+		}
+		
+		&.light_title {
+			@include franklinBookCond;			
+		}
+		
+		&.bold_title {
+			@include franklinDemiCond;
+		}	
+	}
+	
+	p {
+		color: $white;
+		margin: 10px 0;
+		font-size: 20px;
+	}
+}
+
+.hero-swiper-container, .hero-swiper-container .swiper-slide {
+	width: 100%;
+	height: auto;
+	
+	@include media($mobile){
+		height: 550px !important;	
+	}
+	
+	@include media($break320){
+		height: 500px !important;
+	}
+}
+
+.hero-swiper-container .swiper-slide  img {
+	width: 100%;
+	height: auto;
+}
+
+.hero_slides {
+	
+	@include media($mobile){
+		height: 550px; 
+	}
+	
+	.slide {
+		
+		@include media($mobile){
+			height: inherit;
+		}
+	}
+}
+
+.hero_single_image {
+	
+	@include media($mobile){
+		min-height: 400px;
+	}
+
+    picture {
+        width: 100%;
+        height: 100%;
+    }
+	
+	img {
+		
+		@include media($mobile){
+			height: 100% !important;
+			min-height: 400px;
+		}
+	}
+}
+
+.hero_slide_image {
+	height: inherit;
+	//max-height: 500px;
+	
+	@include media($mobile){
+		height: inherit;
+	}
+	
+	picture {
+		
+		@include media($mobile){
+			height: inherit;
+		}
+	
+		img {
+			
+			@include media($mobile){
+				height: 100% !important;
+			}
+		}
+	}
+}
+
+.position_pagination {
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	z-index: 20;
+	
+	@include media($break1000) {
+        padding: 0 30px;
+    }
+	
+	@include media($break900){
+		padding: 0px 30px;
+	}
+	
+	@include media($tablet){
+		padding: 0px 20px;
+	}
+	
+	@include media($mobile){
+		bottom: 170px;
+		padding: 0px 20px;
+	}
+}
+
+.hero_pagination {
+	
+	span {
+		width: 35px;
+		height: 4px;
+		display: block;
+		float: left;
+		margin-right: 17px;
+		background: url('../images/hero-pagination.png') 0 -6px no-repeat;
+		cursor: pointer;
+		
+		&.swiper-active-switch {
+			background-position: 0 0px;
+		}
+	}
+
+	@include media($tablet) {
+		bottom:  -20px;
+	}
+
+	@include media($mobile) {
+		bottom:  -60px;
+	}
+}
+
+.fixed_header_spacer {
+	display: block;
+	width: 100%;
+	height: 90px;
+}
+
+.single {
+	
+	.hero_copy {
+		
+		h2 {
+			color: $white;
+		}
+	}
+}

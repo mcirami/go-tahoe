@@ -1,0 +1,181 @@
+.secondary_footer {
+	@include span-columns(12);
+	background: $dark-offwhite;
+	padding: 40px;
+	display: block;
+	
+	.blue_border_button {
+		width: 50%;
+		margin-top: 10px;
+
+       @include media($tablet) {
+           width: 60%;
+       }
+		
+		@include media($mobile) {
+			width: 40%;
+			padding: 12px;
+		}
+	}
+	
+	@include media($tablet) {
+		width: 100%;
+		padding: 20px;
+	}
+	
+	@include media($mobile) {
+		width: 100%;
+		padding: 25px;
+	}
+	
+	.secondary_footer_section {
+		@include span-columns(4);
+		display: block;
+		//padding-left: 30px;
+		
+		@include media($tablet) {
+			padding-left: 15px;
+		}
+		
+		@include media($mobile) {
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 0;
+		}
+		
+		&:last-child {
+			
+			@include media($mobile) {
+				margin-bottom: 0;
+			}
+		}
+		
+		h2 {
+			padding-bottom: 20px;
+			text-transform: uppercase;
+			
+			@include media($mobile) {
+				padding-bottom: 10px;
+			}
+		}
+		
+		h4 {
+			color: $darkgray;
+			margin-bottom: 40px;
+			font-size: smaller;
+			font-weight: 800;
+			
+			@include media($mobile) {
+				margin-bottom: 20px;
+			}
+
+			&.days_deal {
+	
+				&:before {
+					content: '';
+					background: url('../images/dollar-sign.png') center no-repeat;
+					display: block;
+					height: 17px;
+					width: 15px;
+					float: left;
+					clear: none;
+				}
+			}
+			
+			&.trip_idea {
+	
+				&:before {
+					content: '';
+					background: url('../images/bulb.png') center no-repeat;
+					display: block;
+					height: 17px;
+					width: 22px;
+					float: left;
+					clear: none;
+				}
+			}
+			
+			&.newsletter_header {
+	
+				&:before {
+					content: '';
+					background: url('../images/newspaper.png') center no-repeat;
+					display: block;
+					height: 16px;
+					width: 24px;
+					float: left;
+					clear: none;
+				}
+			}
+		}
+	}
+}
+
+.newsletter_signup {
+
+  ::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 14px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 14px;
+  }
+	
+	form {
+		
+		.gfield_label {
+			display: none !important;
+		}
+		
+		.gform_body {
+			@include clearfix;
+		}
+	}
+
+	#input_3_1 {
+		@include archerBook;
+		height: 44px;
+		width: 90%;
+		padding-left: 20px;
+		float: left;
+		font-size: 12px;
+		
+		@include media($tablet) {
+			padding-left: 10px;
+		}
+
+    }
+	
+	#gform_submit_button_3 {
+		height: 44px;
+		width: 42px;
+		background: $white url('../images/arrow.png') center no-repeat;
+		border: 1px solid $buttonblue;
+        float: right;
+        position: absolute;
+        bottom: 42px;
+        left: 85%;
+        color: transparent;
+
+
+		@include media($mobile) {
+			right: 10px;
+		}
+	}
+
+    .gform_wrapper {
+        .gfield_error {
+            width: 100% !important;
+        }
+    }
+}
+
+
